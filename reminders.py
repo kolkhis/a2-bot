@@ -17,14 +17,10 @@ DEFAULT_CHANNEL_ID: int = int(os.environ.get("REMINDER_CHANNEL_ID", "0"))
 #   channel_id: (optional) channel to post in, overrides DEFAULT_CHANNEL_ID
 #   role_id:    (optional) role to ping via {mention}
 REMINDERS: dict[str, dict] = {
-    "Example Reminder": {
-        "days": ["Monday", "Wednesday", "Friday"],
+    "Weekly Reset": {
+        "days": ["Tuesday"],
         "time": "12:00",
-        "message": "{mention} Reminder: **{name}** at {timestamp} ({relative_timestamp})!",
-    },
-    "Daily Check-in": {
-        "days": ["Daily"],
-        "time": "09:00",
-        "message": "Good morning! Time for the **{name}**.",
+        "message": "{mention} Reminder: **Weekly reset is tomorrow.** Make sure " \
+        "you do your Ascension trials and weekly commands!",
     },
 }
